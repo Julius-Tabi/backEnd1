@@ -1,0 +1,104 @@
+<ion-content class="bg-color">
+
+  <ion-card class="ion-no-margin">
+
+      <ion-card-header>
+          <ion-card-title style="text-align: center;">
+              Co-Working-Space
+          </ion-card-title>
+          <ion-card-subtitle style="text-align: center;">
+              Upload Co-Working-Space by filling up the form
+          </ion-card-subtitle>
+      </ion-card-header><br>
+
+      <ion-card-content>
+          <form [formGroup]="AddSpace" (ngSubmit)="submit()">
+              <div class="wrapform">
+                  <ion-item>
+                      <ion-label>Space category</ion-label>
+                      <ion-select interface="popover" formControlName="category">
+                          <ion-select-option value="private office">Private Office</ion-select-option>
+                          <ion-select-option value="boardroom">BoardRoom</ion-select-option>
+                          <ion-select-option value="Pair">Pair Office</ion-select-option>
+                          <ion-select-option value="Sharing">Cubical</ion-select-option>
+                          <ion-select-option value="OpenSpace">Open Plan</ion-select-option>
+                          <!-- <ion-select-option value="snes">SNES</ion-select-option> -->
+                      </ion-select>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Category Number</ion-label>
+                      <ion-select interface="popover" formControlName="categoryNo">
+                          <!-- <ion-select-option value="private office">Private Office</ion-select-option> -->
+                          <ion-select-option value="1">1</ion-select-option>
+                          <ion-select-option value="2">2</ion-select-option>
+                          <ion-select-option value="3">3</ion-select-option>
+                          <ion-select-option value="4">4</ion-select-option>
+                          <!-- <ion-select-option value="snes">SNES</ion-select-option> -->
+                      </ion-select>
+                  </ion-item>
+                  <div *ngFor="let error of errorMessages.category">
+                      <ng-container *ngIf="category.hasError(error.type) && (category.dirty || category.touched)">
+                          <small class="error-message">{{error.message}}</small>
+                      </ng-container>
+                  </div>
+                  <ion-list-header>
+                      <ion-label style="font-size: x-large; text-align: center;">Address</ion-label>
+                  </ion-list-header>
+                  <ion-item class="roundedInput">
+                      <!-- <ion-label position="floating">Street</ion-label> -->
+                      <ion-input formControlName="street" placeholder="Street"></ion-input>
+                  </ion-item>
+                  <div *ngFor="let error of errorMessages.street">
+                      <ng-container *ngIf="street.hasError(error.type) && (street.dirty || street.touched)">
+                          <small class="error-message">{{error.message}}</small>
+                      </ng-container>
+                  </div>
+                  <ion-item class="roundedInput">
+                      <!-- <ion-label position="floating">City</ion-label> -->
+                      <ion-input formControlName="city" placeholder="City"></ion-input>
+                  </ion-item>
+                  <div *ngFor="let error of errorMessages.city">
+                      <ng-container *ngIf="city.hasError(error.type) && (city.dirty || city.touched)">
+                          <small class="error-message">{{error.message}}</small>
+                      </ng-container>
+                  </div>
+                  <ion-item class="roundedInput">
+                      <!-- <ion-label position="floating">Province</ion-label> -->
+                      <ion-input formControlName="province" placeholder="Province"></ion-input>
+                  </ion-item>
+                  <div *ngFor="let error of errorMessages.province">
+                      <ng-container *ngIf="province.hasError(error.type) && (province.dirty || province.touched)">
+                          <small class="error-message">{{error.message}}</small>
+                      </ng-container>
+                  </div>
+                  <ion-item class="roundedInput">
+                      <!-- <ion-label position="floating">Zip Code</ion-label> -->
+                      <ion-input formControlName="zip" placeholder="Zip Code"></ion-input>
+                  </ion-item>
+                  <div *ngFor="let error of errorMessages.zip">
+                      <ng-container *ngIf="zip.hasError(error.type) && (zip.dirty || zip.touched)">
+                          <small class="error-message">{{error.message}}</small>
+                      </ng-container>
+                  </div>
+                  <ion-list-header>
+                      <ion-label style="font-size: x-large; text-align: center;">Select Space Resources if Available</ion-label>
+                  </ion-list-header>
+                  <!-- <ion-label style="font-size: x-large; text-align: center;">Add Space Resources</ion-label> -->
+                  <div class="sign-btn-wrap">
+                      <ion-button shape="round" color="secondary" [routerLink]="'/resources'" style="width: 60%; margin-left: 20%;">Add Resources 
+                          <!-- <ion-icon slot="end " name="add">
+                          </ion-icon> -->
+                      </ion-button><br>
+                      <ion-button shape="round" [disabled]="!AddSpace.valid" type="submit " style="width: 50%; margin-left: 25%;">Finish
+                          <ion-icon slot="end " name="add">
+                          </ion-icon>
+                      </ion-button>
+                  </div>
+
+              </div>
+
+          </form>
+      </ion-card-content>
+
+  </ion-card>
+</ion-content>

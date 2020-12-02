@@ -74,6 +74,22 @@ const routes: Routes = [
     path: 'reservation',
     loadChildren: () => import('./pages/reservation/reservation.module').then( m => m.ReservationPageModule)
   },
+  {
+    path: 'update-space',
+    loadChildren: () => import('./pages/update-space/update-space.module').then( m => m.UpdateSpacePageModule)
+  },
+  {
+    path: 'upload-space',
+    loadChildren: () => import('./pages/upload-space/upload-space.module').then( m => m.UploadSpacePageModule)
+  },
+  {
+    path: 'resources',
+    loadChildren: () => import('./pages/resources/resources.module').then( m => m.ResourcesPageModule)
+  },
+  {
+    path: 'upload-gallery',
+    loadChildren: () => import('./pages/upload-gallery/upload-gallery.module').then( m => m.UploadGalleryPageModule)
+  },
 
 
   

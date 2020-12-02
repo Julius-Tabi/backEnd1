@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>resources</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="bg-color">
+
+  <ion-card class="ion-no-margin">
+
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">
+         Resources and Animities
+      </ion-card-title>
+      <ion-card-subtitle style="text-align: center;">
+          Add Resources and Animities by Checking the boxes
+      </ion-card-subtitle>
+  </ion-card-header>
+
+      <ion-card-content>
+          <form [formGroup]="AddResources" (ngSubmit)="submit()">
+              <div class="wrapform">
+                  <ion-list>
+                    <ion-item-divider></ion-item-divider>
+                      <ion-title style="text-align: center;">Resources</ion-title>
+                      <ion-item-divider></ion-item-divider>
+                      <ion-item *ngFor="let Resources of Resources" (click)="onClick(Resources)">
+                          <ion-label>{{Resources.name}}</ion-label>
+                          <ion-checkbox checked=false color="primary" slot="end" formControlName="resource" [(ngModel)]="Resources.isChecked"></ion-checkbox>
+                      </ion-item>
+                  </ion-list>
+                  <ion-list>
+                    
+                      <ion-title style="text-align: center;">Animities</ion-title>
+                      <ion-item-divider></ion-item-divider>
+                      <ion-item *ngFor="let Animities of Animities" (click)="onClick(Animities)">
+                          <ion-label>{{Animities.name}}</ion-label>
+                          <ion-checkbox checked=false color="danger" slot="end" formControlName="anemity" [(ngModel)]="Animities.isChecked"></ion-checkbox>
+                      </ion-item>
+                  </ion-list>
+                  <div class="sign-btn-wrap">
+                      <ion-button shape="round" (click)="onClick()" color="secondary" type="submit "style="width: 70%; margin-left: 15%;">Add selected resources
+                          <ion-icon slot="end " name="add">
+                          </ion-icon>
+                      </ion-button>
+                      <ion-button shape="round" style="width: 50%; margin-left: 25%;"  [routerLink]="'/upload-space'">Done
+                        <ion-icon slot="end " name="add">
+                        </ion-icon>
+                    </ion-button>
+                  </div>
+
+              </div>
+
+          </form>
+      </ion-card-content>
+
+  </ion-card>
+</ion-content>
+

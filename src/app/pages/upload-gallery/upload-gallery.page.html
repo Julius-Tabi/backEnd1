@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title style="text-align: center;">upload-gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+      <!-- <img [src]="downloadurl" height="200" width="200" /> -->
+      <form [formGroup]="AddSpacePics" (ngSubmit)="submit()">
+          <!-- <ion-item > -->
+              <!-- <ion-button style="height: 70%; align-self: center;" > -->
+              <!-- <ion-label>Dish picture:</ion-label> -->
+              <ion-input formControlName="Spacepictures" id="File-input" placeholder="Select Item Image" onfocus="this.value=''" type="file" accept="image/*" (change)="addPic($event)" value="Click here to clear" name="picture" required [(ngModel)]="downloadurl"></ion-input>
+              <label for="File-input">
+                  <ion-icon name="images" slot="end"></ion-icon> &nbsp;
+                  Select Picture
+              </label>
+              <!-- <label for="File-input">
+                  <ion-icon name="images" slot="end"></ion-icon> &nbsp;
+                 Select Picture
+              </label> -->
+              <!-- <br><br><br><br><br><br> -->
+          
+          <!-- </ion-button> -->
+          <!-- </ion-item> -->
+          <div *ngFor="let error of errorMessages.Spacepictures">
+              <ng-container *ngIf="Spacepictures.hasError(error.type) && (Spacepictures.dirty || Spacepictures.touched)">
+                  <small class="error-message">{{error.message}}</small>
+              </ng-container>
+          </div>
+          <div class="sign-btn-wrap">
+              <ion-button shape="round" [disabled]="!AddSpacePics.valid " type="submit " color="secondary" style="width: 60%; margin-left: 20%;">Upload
+                  <ion-icon slot="end " name="add">
+                  </ion-icon>
+              </ion-button><br>
+          </div>
+      </form>
+
+
+  </div>
+</ion-content>

@@ -15,7 +15,7 @@ export class SignInSignUpService {
   emailOwner: any;
   email: any;
   uid: any;
-
+  // UID:any;
   status: boolean;
   group: any
 
@@ -27,6 +27,25 @@ export class SignInSignUpService {
   //     console.log(error.message);
   //   })
   // }
+
+  signAuth(){
+    return firebase.auth().onAuthStateChanged(user => {
+     if(user){
+      const uid = user.uid;
+      //  this.setSession(email);
+      this.setuid(uid)
+      console.log('user logged in: ', user);
+     }else{
+       console.log('user logged out')
+     }
+    });
+  }
+  setuid(a){
+    this.uid = a;
+  }
+  getUid(){
+    return this.uid;
+  }
   Signup(email, password) {
 
     return firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -231,7 +250,7 @@ export class SignInSignUpService {
                 console.log("Owner")
                 this.status = true;
                 console.log("Document data:", doc.data());
-                this.router.navigateByUrl('owner-home');
+                this.router.navigateByUrl('update-space');
               }
         
           }
