@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border"[translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true>">
+
+    <ion-slide>
+      <img src="./assets/purple2.png">
+      <h1>Welcome to</h1>
+      <p>Synergic</p>
+      <br><br>
+     <ion-button [routerLink]="'/signin'" style="--background:#A944F1" shape ="round">Skip</ion-button> 
+     </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/purple.png">
+      <h2>Explore the World of business</h2>
+      <br><br>
+      <ion-button [routerLink]="'/signin'" style="--background:#A944F1" shape ="round">Skip</ion-button> 
+    </ion-slide>
+  </ion-slides>   
+</ion-content>

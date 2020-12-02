@@ -1,0 +1,26 @@
+
+<ion-content>
+<div class="wrapper">
+ 
+  <div class="addprofile">
+    <ion-icon   (click)="openmodal()" style="position: absolute;bottom: 0%;color: black;font-size: 40px;" name="add-circle-outline"></ion-icon>
+  </div>
+
+
+  <div class="profileview">
+    <ion-icon [routerLink]="'/owner-home'" style="font-size: 30px;color:black; position: absolute; top: 8%; left: 5%;" name="arrow-back-outline"></ion-icon>
+    <p style="color:black; font-size: 20px; font-weight: bolder;position: absolute;top: 5%;left: 20%;" >Below are your profiles</p>
+  
+    <ion-item style="--background: #F6F6F6; position: absolute;left: 0%;top: 20%;">
+      <ion-avatar slot="start">
+        <img src="assets/profile.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Building 4</h2>
+        <h3>Kibler park</h3>
+        <p>Contains 18 offices...</p>
+      </ion-label>
+    </ion-item>
+  </div>
+</div>
+</ion-content>

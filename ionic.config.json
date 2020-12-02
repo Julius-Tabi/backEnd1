@@ -1,0 +1,7 @@
+{
+  "name": "synergicpro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
