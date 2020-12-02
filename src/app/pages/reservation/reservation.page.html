@@ -1,0 +1,103 @@
+ 
+<ion-content>
+  <form action=""      [formGroup]="walkinForm"  >
+  <ion-item>
+    <ion-label>Date in</ion-label>
+   <ion-input type="date" formControlName="checkin"   name="checkin"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date out</ion-label>
+   <ion-input  type="date" formControlName="checkout"   name="checkout"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>timein</ion-label>
+    <ion-select formControlName="timein" class="custom-options" multiple="true">
+      <ion-select-option value="00:00">00:00</ion-select-option>
+      <ion-select-option value="1:00">1:00</ion-select-option>
+      <ion-select-option value="black">2:00</ion-select-option>
+      <ion-select-option value="red">3:00</ion-select-option>
+      <ion-select-option value="red">4:00</ion-select-option>
+      <ion-select-option value="red">5:00</ion-select-option>
+      <ion-select-option value="red">6:00</ion-select-option>
+      <ion-select-option value="red">7:00</ion-select-option>
+      <ion-select-option value="red">8:00</ion-select-option>
+      <ion-select-option value="red">9:00</ion-select-option>
+      <ion-select-option value="red">10:00</ion-select-option>
+      <ion-select-option value="red">11:00</ion-select-option>
+      <ion-select-option value="red">12:00</ion-select-option>
+      <ion-select-option value="red">13:00</ion-select-option>
+      <ion-select-option value="red">14:00</ion-select-option>
+      <ion-select-option value="red">15:00</ion-select-option>
+      <ion-select-option value="red">16:00</ion-select-option>
+      <ion-select-option value="red">17:00</ion-select-option>
+      <ion-select-option value="red">18:00</ion-select-option>
+      <ion-select-option value="red">19:00</ion-select-option>
+      <ion-select-option value="red">20:00</ion-select-option>
+      <ion-select-option value="red">21:00</ion-select-option>
+      <ion-select-option value="red">22:00</ion-select-option>
+      <ion-select-option value="red">23:00</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>timeout</ion-label>
+    <ion-select class="custom-options" formControlName="timeout" multiple="true">
+      <ion-select-option value="00:00">00:00</ion-select-option>
+      <ion-select-option value="1:00">1:00</ion-select-option>
+      <ion-select-option value="black">2:00</ion-select-option>
+      <ion-select-option value="red">3:00</ion-select-option>
+      <ion-select-option value="red">4:00</ion-select-option>
+      <ion-select-option value="red">5:00</ion-select-option>
+      <ion-select-option value="red">6:00</ion-select-option>
+      <ion-select-option value="red">7:00</ion-select-option>
+      <ion-select-option value="red">8:00</ion-select-option>
+      <ion-select-option value="red">9:00</ion-select-option>
+      <ion-select-option value="red">10:00</ion-select-option>
+      <ion-select-option value="red">11:00</ion-select-option>
+      <ion-select-option value="red">12:00</ion-select-option>
+      <ion-select-option value="red">13:00</ion-select-option>
+      <ion-select-option value="red">14:00</ion-select-option>
+      <ion-select-option value="red">15:00</ion-select-option>
+      <ion-select-option value="red">16:00</ion-select-option>
+      <ion-select-option value="red">17:00</ion-select-option>
+      <ion-select-option value="red">18:00</ion-select-option>
+      <ion-select-option value="red">19:00</ion-select-option>
+      <ion-select-option value="red">20:00</ion-select-option>
+      <ion-select-option value="red">21:00</ion-select-option>
+      <ion-select-option value="red">22:00</ion-select-option>
+      <ion-select-option value="red">23:00</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-button style="width:100%;" (click)="submit()">
+    <ion-icon slot="icon-only"  name="person-circle"></ion-icon>
+  </ion-button>
+
+</form>
+
+
+  <div class="wrapper">
+
+     <div class="bottom"> 
+
+<div class="formHolder">
+ <!-- <form action=""      [formGroup]="walkinForm"  >
+     
+   <div>
+
+     <ion-input  formControlName="timein"  placeholder="timein..."></ion-input>
+     <ion-input  formControlName="timeout"  placeholder="timeout..."></ion-input>
+     <ion-input  formControlName="checkin" placeholder="checkin..."></ion-input>
+     <ion-input  formControlName="checkout" placeholder="checkout..."></ion-input>
+     <ion-input  formControlName="spaceBooked" placeholder="spaceBooked..."></ion-input>
+     <br>
+     <ion-button shape="round" (click)="submit()" [disabled]="!walkinForm.valid" style="--background: #F6F6F6;width: 100%; color: #455A64;font-weight: bold;" >Update</ion-button>
+     </div>  
+   </form> -->
+ </div>
+     </div>
+ </div>
+
+
+
+</ion-content> 

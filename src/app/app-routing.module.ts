@@ -70,6 +70,10 @@ const routes: Routes = [
     path: 'model',
     loadChildren: () => import('./pages/model/model.module').then( m => m.ModelPageModule)
   },
+  {
+    path: 'reservation',
+    loadChildren: () => import('./pages/reservation/reservation.module').then( m => m.ReservationPageModule)
+  },
 
 
   
