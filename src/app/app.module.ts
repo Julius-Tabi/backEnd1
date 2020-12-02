@@ -13,6 +13,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/firestore';
+import { ProfilesPageModule } from './pages/profiles/profiles.module';
+import { ModelPageModule } from './pages/model/model.module';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDxB_DkempfeYitUSydU4rmbKSS8RXglno",
@@ -31,7 +33,7 @@ firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ProfilesPageModule, ModelPageModule],
   providers: [
     StatusBar,
     SplashScreen,

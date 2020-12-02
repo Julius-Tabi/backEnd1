@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>walkin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+
+     <div class="bottom"> 
+
+<div class="formHolder">
+ <form action=""      [formGroup]="walkinForm"  >
+     
+   <div>
+     <ion-input  formControlName="usersname"  placeholder="usersname..."></ion-input>
+     <ion-input  formControlName="surname"  placeholder="surname..."></ion-input>
+     <ion-input  formControlName="phone"  placeholder="phone..."></ion-input>
+     <ion-input  formControlName="timein"  placeholder="timein..."></ion-input>
+     <ion-input  formControlName="timeout"  placeholder="timeout..."></ion-input>
+     <ion-input  formControlName="checkin" placeholder="checkin..."></ion-input>
+     <ion-input  formControlName="checkout" placeholder="checkout..."></ion-input>
+     <ion-input  formControlName="spaceBooked" placeholder="spaceBooked..."></ion-input>
+     <br>
+     <ion-button shape="round" (click)="submit()" [disabled]="!walkinForm.valid" style="--background: #F6F6F6;width: 100%; color: #455A64;font-weight: bold;" >Update</ion-button>
+     </div>  
+   </form>
+ </div>
+     </div>
+ </div>
+
+
+
+</ion-content> 

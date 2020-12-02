@@ -1,26 +1,104 @@
 
 <ion-content>
-<div class="wrapper">
+
  
-  <div class="addprofile">
-    <ion-icon   (click)="openmodal()" style="position: absolute;bottom: 0%;color: black;font-size: 40px;" name="add-circle-outline"></ion-icon>
-  </div>
 
-
-  <div class="profileview">
-    <ion-icon [routerLink]="'/owner-home'" style="font-size: 30px;color:black; position: absolute; top: 8%; left: 5%;" name="arrow-back-outline"></ion-icon>
-    <p style="color:black; font-size: 20px; font-weight: bolder;position: absolute;top: 5%;left: 20%;" >Below are your profiles</p>
-  
-    <ion-item style="--background: #F6F6F6; position: absolute;left: 0%;top: 20%;">
-      <ion-avatar slot="start">
-        <img src="assets/profile.jpg">
+  <ion-card  *ngFor="let x of array; let i = index">
+    <div  >
+<ion-grid>
+  <ion-row>
+    <ion-col size="4">
+    </ion-col>
+    <ion-col size="4">
+      <ion-avatar style="height:100px;width:100px;">
+        <img  src="assets/profile.jpg">
       </ion-avatar>
-      <ion-label>
-        <h2>Building 4</h2>
-        <h3>Kibler park</h3>
-        <p>Contains 18 offices...</p>
-      </ion-label>
-    </ion-item>
-  </div>
+    </ion-col>
+    <ion-col size="4">
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+     
+
+
+     <ion-card-header>
+
+      <ion-grid>
+        <ion-row>
+          {{x.company_name}}
+        </ion-row>
+        <ion-row>
+          {{x.aboutus}}
+        </ion-row>
+        <ion-row>
+          {{x.company_address}}
+        </ion-row>
+        <ion-row>
+          <div *ngFor="let y of x.outside_features;">
+            <ion-card-subtitle *ngIf="y==='Ben 10'"  >
+              <img style="height:15%;width:15%;" src="./assets/outside/228467827.ico" />
+            </ion-card-subtitle>
+          </div>
+        </ion-row>
+        <ion-row>
+          {{x.company_emaile}}
+        </ion-row>
+        <ion-row>
+          {{x.company_tel}}
+        </ion-row>
+        <ion-row>
+          {{x.company_website}}
+        </ion-row>
+        <ion-row>
+          {{x.social_media}}
+        </ion-row>
+      </ion-grid>
+
+
+<!-- 
+       <ion-card-title>{{x.company_name}}</ion-card-title>
+       <ion-card-title>{{x.aboutus}}</ion-card-title>
+       <ion-card-subtitle>{{x.company_address}}</ion-card-subtitle>
+<div *ngFor="let y of x.outside_features;">
+  <ion-card-subtitle *ngIf="y==='Ben 10'"  >
+    <img style="height:15%;width:15%;" src="./assets/outside/228467827.ico" />
+  </ion-card-subtitle>
 </div>
+       <ion-card-subtitle>{{x.company_emaile}}</ion-card-subtitle>
+       <ion-card-subtitle >{{x.company_tel}}</ion-card-subtitle>
+       <ion-card-subtitle>{{x.company_website}}</ion-card-subtitle>
+       <ion-card-subtitle>{{x.social_media}}</ion-card-subtitle> -->
+     </ion-card-header>
+   </div>
+ </ion-card>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+             <ion-avatar >
+                <img src="assets/profile.jpg">
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+            <ion-grid>
+              <ion-row>
+                Building 4
+              </ion-row>
+              <ion-row>
+                Kibler park
+              </ion-row>
+              <ion-row>
+                Contains 18 offices...
+              </ion-row>
+            </ion-grid>
+        </ion-col>   
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <a  style="color: black;" [routerLink]="'/add-profile-modal'">update profile</a>
+  
 </ion-content>

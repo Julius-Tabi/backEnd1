@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { AddProfileModalPageRoutingModule } from './add-profile-modal-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddProfileModalPage } from './add-profile-modal.page';
 
@@ -13,7 +14,8 @@ import { AddProfileModalPage } from './add-profile-modal.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AddProfileModalPageRoutingModule
+    AddProfileModalPageRoutingModule,
+    ReactiveFormsModule,   FormsModule, ReactiveFormsModule
   ],
   declarations: [AddProfileModalPage]
 })

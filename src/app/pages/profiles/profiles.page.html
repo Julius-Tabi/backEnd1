@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profiles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let x of array">
+   <div  (click)="openModal(x.uid)" >
+    <img [src]="x.img_profile" />
+    <ion-card-header>
+      <ion-card-title>{{x.company_name}}</ion-card-title>
+      <ion-card-subtitle>{{x.aboutus}}</ion-card-subtitle>
+     
+    </ion-card-header>
+  </div>
+</ion-card>
+
+</ion-content>
+<!-- aboutus: "The textarea component is used for multi-line text input. A native textarea element is rendered inside of the component."
+company_address: "cnr codron and maven road"
+company_emaile: "roosebank@rose.com"
+company_name: "Rosebank office park"
+company_tel: "0786901232"
+company_website: "www.pui.com"
+date: t {seconds: 1606593002, nanoseconds: 608000000}
+img_profile: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD"
+outside_features: (4) ["Tom and Jerry", "Rick and Morty", "Ben 10", "Batman: The Animated Series"]
+profile_uid: "TRHjFD2bPNunbdYz3XuH"
+social_media: "facebook"
+uid: "8j3w4lEbm3OBxgQYVNGQmN1YU292"
+user_uid: "TRHjFD2bPNunbdYz3XuH"
+usergroup: "owner" -->

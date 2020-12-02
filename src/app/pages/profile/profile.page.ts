@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { AddProfileModalPage } from '../add-profile-modal/add-profile-modal.page';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { SignInSignUpService } from 'src/app/sign-in-sign-up.service';
+import { UserService } from 'src/app/user-service/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,19 +11,25 @@ import { AddProfileModalPage } from '../add-profile-modal/add-profile-modal.page
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private modalCntrl:ModalController ) { }
 
-
-
+  modalTitle: string;
+  modelId: number;
+  array:any=[]
+  userid: any;
+  constructor(
+    public userservice:SignInSignUpService
+  ) {
+    firebase.firestore().collectionGroup("profile").where("uid","==",this.userservice.  getUserSession())
+    .get()
+    .then(snap => {
+      snap.forEach(doc => {
+      this.array.push(Object.assign(doc.data()) )
+      console.log("ffffffff"+this.array)
+            });
+    });
+   }
   ngOnInit() {
+    
   }
 
-  cssClass:'profile-modal';
- async openmodal(){
-    // console.log('open')
-    const modal = await this.modalCntrl.create({
-     component:AddProfileModalPage
-    })
-   return await modal.present()
-  }
 }

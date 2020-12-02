@@ -58,7 +58,19 @@ const routes: Routes = [
   {
     path: 'user-group',
     loadChildren: () => import('./user-group/user-group.module').then( m => m.UserGroupPageModule)
+  },  {
+    path: 'walkin',
+    loadChildren: () => import('./pages/walkin/walkin.module').then( m => m.WalkinPageModule)
   },
+  {
+    path: 'profiles',
+    loadChildren: () => import('./pages/profiles/profiles.module').then( m => m.ProfilesPageModule)
+  },
+  {
+    path: 'model',
+    loadChildren: () => import('./pages/model/model.module').then( m => m.ModelPageModule)
+  },
+
 
   
 
