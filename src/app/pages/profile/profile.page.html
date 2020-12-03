@@ -1,9 +1,20 @@
 
 <ion-content>
 
- 
+ <div class="wrapper">
+<div class="top">
+  <ion-avatar style="position: absolute; top: 20%;">
+    <img  src="assets/bg.jpg">
+  </ion-avatar>
+  
+</div>
 
-  <ion-card  *ngFor="let x of array; let i = index">
+
+
+
+ </div>
+
+  <!-- <ion-card  *ngFor="let x of array; let i = index">
     <div  >
 <ion-grid>
   <ion-row>
@@ -54,7 +65,7 @@
         <ion-row>
           {{x.social_media}}
         </ion-row>
-      </ion-grid>
+      </ion-grid> -->
 
 
 <!-- 
@@ -70,7 +81,7 @@
        <ion-card-subtitle >{{x.company_tel}}</ion-card-subtitle>
        <ion-card-subtitle>{{x.company_website}}</ion-card-subtitle>
        <ion-card-subtitle>{{x.social_media}}</ion-card-subtitle> -->
-     </ion-card-header>
+     <!-- </ion-card-header>
    </div>
  </ion-card>
 
@@ -99,6 +110,6 @@
     </ion-grid>
   </ion-card>
 
-  <a  style="color: black;" [routerLink]="'/add-profile-modal'">update profile</a>
+  <a  style="color: black;" [routerLink]="'/add-profile-modal'">update profile</a> -->
   
 </ion-content>

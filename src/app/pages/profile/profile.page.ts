@@ -19,14 +19,14 @@ export class ProfilePage implements OnInit {
   constructor(
     public userservice:SignInSignUpService
   ) {
-    firebase.firestore().collectionGroup("profile").where("uid","==",this.userservice.  getUserSession())
-    .get()
-    .then(snap => {
-      snap.forEach(doc => {
-      this.array.push(Object.assign(doc.data()) )
-      console.log("ffffffff"+this.array)
-            });
-    });
+    // firebase.firestore().collectionGroup("profile").where("uid","==",this.userservice.  getUserSession())
+    // .get()
+    // .then(snap => {
+    //   snap.forEach(doc => {
+    //   this.array.push(Object.assign(doc.data()) )
+    //   console.log("ffffffff"+this.array)
+    //         });
+    // });
    }
   ngOnInit() {
     
