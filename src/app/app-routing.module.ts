@@ -19,10 +19,7 @@ const routes: Routes = [
     path: 'bookings',
     loadChildren: () => import('./pages/bookings/bookings.module').then( m => m.BookingsPageModule)
   },
-  {
-    path: 'history',
-    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
-  },
+ 
   {
     path: 'onboarding',
     loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
@@ -35,10 +32,7 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
   },
-  {
-    path: 'new-bookings',
-    loadChildren: () => import('./pages/new-bookings/new-bookings.module').then( m => m.NewBookingsPageModule)
-  },
+ 
   {
     path: 'manage-spaces',
     loadChildren: () => import('./pages/manage-spaces/manage-spaces.module').then( m => m.ManageSpacesPageModule)
@@ -58,7 +52,8 @@ const routes: Routes = [
   {
     path: 'user-group',
     loadChildren: () => import('./user-group/user-group.module').then( m => m.UserGroupPageModule)
-  },  {
+  },
+  {
     path: 'walkin',
     loadChildren: () => import('./pages/walkin/walkin.module').then( m => m.WalkinPageModule)
   },
