@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { SignInSignUpService } from 'src/app/sign-in-sign-up.service';
-import { UserService } from 'src/app/user-service/user.service';
+
 
 @Component({
   selector: 'app-profile',
