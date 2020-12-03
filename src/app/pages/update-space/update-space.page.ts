@@ -131,7 +131,7 @@ export class UpdateSpacePage implements OnInit {
     //   console.log('Event Owner: ', this.profOwner)
     // })
     // console.log(user);
-    this.signinsignup.signAuth();
+    // this.signinsignup.signAuth();
     let user = firebase.auth().currentUser.uid;
     this.db.collection("CoWorking-Space")
     .doc(user)
