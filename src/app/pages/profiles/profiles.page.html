@@ -6,13 +6,22 @@
 
 <ion-content>
   <ion-card *ngFor="let x of array">
-   <div  (click)="openModal(x.uid)" >
+   <div   >
     <img [src]="x.img_profile" />
     <ion-card-header>
       <ion-card-title>{{x.company_name}}</ion-card-title>
       <ion-card-subtitle>{{x.aboutus}}</ion-card-subtitle>
      
     </ion-card-header>
+    <ion-toolbar>
+      <ion-button  (click)="openModal(x.uid)">
+        view profile
+      </ion-button>
+           
+      <ion-button  [routerLink]="['/catagories',x.uid]">
+        Co-workingSpaces
+      </ion-button>
+    </ion-toolbar>
   </div>
 </ion-card>
 

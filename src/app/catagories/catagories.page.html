@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  
+      <ion-title size="large">WORKING SPACE</ion-title>
+   
+  </ion-header>
+
+  <div *ngFor="let x of array">
+
+    <div [routerLink]="['/catagory',x.category]" *ngIf="x.category == 'Sharing'" style=" background-image: url(./assets/oficces.jpg);   background-repeat: no-repeat;height:200px;
+    background-size: 100% 100%;">
+      <h1>Sharing</h1>
+      </div>
+      <div *ngIf="x.category == 'private office'" style=" background-image: url(./assets/boardroom.jpg);background-repeat: no-repeat;height:200px;
+      background-size: 100% 100%;">
+        <h1>private office</h1>
+        </div>
+        <div *ngIf="x.category == 'boardroom'" style=" background-image: url(./assets/cubicle.jpg);background-repeat: no-repeat;height:200px;
+        background-size: 100% 100%;">
+          <h1>boardroom</h1>
+          </div>
+        
+  </div>
+
+
+
+  
+
+
+  
+</ion-content>

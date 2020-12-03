@@ -58,7 +58,8 @@ const routes: Routes = [
   {
     path: 'user-group',
     loadChildren: () => import('./user-group/user-group.module').then( m => m.UserGroupPageModule)
-  },  {
+  },
+  {
     path: 'walkin',
     loadChildren: () => import('./pages/walkin/walkin.module').then( m => m.WalkinPageModule)
   },
@@ -75,21 +76,18 @@ const routes: Routes = [
     loadChildren: () => import('./pages/reservation/reservation.module').then( m => m.ReservationPageModule)
   },
   {
-    path: 'update-space',
-    loadChildren: () => import('./pages/update-space/update-space.module').then( m => m.UpdateSpacePageModule)
+    path: 'catagories',
+    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
   },
   {
-    path: 'upload-space',
-    loadChildren: () => import('./pages/upload-space/upload-space.module').then( m => m.UploadSpacePageModule)
-  },
+    path: 'catagories/:uid',
+    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
+  }
+  ,
   {
-    path: 'resources',
-    loadChildren: () => import('./pages/resources/resources.module').then( m => m.ResourcesPageModule)
-  },
-  {
-    path: 'upload-gallery',
-    loadChildren: () => import('./pages/upload-gallery/upload-gallery.module').then( m => m.UploadGalleryPageModule)
-  },
+    path: 'catagory/:catag-name',
+    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
+  }
 
 
   
