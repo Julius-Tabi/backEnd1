@@ -1,40 +1,75 @@
 <!-- my-modal.page.html -->
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="danger">
-    <ion-title>my-modal</ion-title>
+    <ion-title>View Workspace</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content  class="ion-padding">
- 
+<ion-content class="ion-padding">
 
-  <ion-card  *ngFor="let x of array; let i = index">
-    <div  (click)="closeModal()" >
-     <img style="height: 50%;" [src]="x.img_profile" />
-     <ion-card-header>
-       <ion-card-title>{{x.company_name}}</ion-card-title>
-       <ion-card-title>{{x.aboutus}}</ion-card-title>
-       <ion-card-subtitle>{{x.company_address}}</ion-card-subtitle>
-     
-       
-<div *ngFor="let y of x.outside_features;">
-  <ion-card-subtitle *ngIf="y==='Ben 10'"  >
-    <img style="height:15%;width:15%;" src="./assets/outside/228467827.ico" />
-  </ion-card-subtitle>
-   
-</div>
+  <div class="container">
 
 
-       <ion-card-subtitle>{{x.company_emaile}}</ion-card-subtitle>
-       <ion-card-subtitle >{{x.company_tel}}</ion-card-subtitle>
+    <ion-card *ngFor="let x of array; let i = index">
+      <div (click)="closeModal()">
+        <img style="height: 50%;" [src]="x.img_profile" />
+        <ion-card-header>
+          <ion-card-title>{{x.company_name}}</ion-card-title>
+          <ion-card-title>{{x.aboutus}}</ion-card-title>
+          <ion-card-subtitle>{{x.company_address}}</ion-card-subtitle>
 
 
-       
+          <div *ngFor="let y of x.outside_features;">
+            <ion-card-subtitle *ngIf="y==='Ben 10'">
+              <img style="height:15%;width:15%;" src="./assets/outside/228467827.ico" />
+            </ion-card-subtitle>
 
-       <ion-card-subtitle>{{x.company_website}}</ion-card-subtitle>
-       <ion-card-subtitle>{{x.social_media}}</ion-card-subtitle>
-     </ion-card-header>
-   </div>
- </ion-card>
-  
+          </div>
+
+
+          <ion-card-subtitle>{{x.company_emaile}}</ion-card-subtitle>
+          <ion-card-subtitle>{{x.company_tel}}</ion-card-subtitle>
+
+
+
+
+          <ion-card-subtitle>{{x.company_website}}</ion-card-subtitle>
+          <ion-card-subtitle>{{x.social_media}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="features">
+          <div class="amentities">
+            <div class="ament">
+              <h3>Amenities</h3>
+            </div>
+            <div class="icons">
+              <div class="icc">
+                <ion-icon class="vd" name="videocam-outline"></ion-icon>
+              </div>
+            <!-- </div> -->
+            <p style="color: white;">Camera</p>
+            <div class="icons">
+              <div class="icc">
+                <ion-icon name="wifi-outline"></ion-icon>
+              </div>
+            </div>
+            <p style="color: white;">Wifi</p>
+          </div>
+          </div>
+
+           <!-- <div>
+              <ion-icon name="wifi-outline"></ion-icon>
+              <p>Wifi</p>
+              <ion-icon name="cafe-outline"></ion-icon>
+              <p>Coffee</p>
+              </div> -->
+
+
+
+
+        </ion-card-content>
+      </div>
+      <ion-button expand="full">Book Now</ion-button>
+    </ion-card>
+  </div>
+
 </ion-content>

@@ -13,7 +13,7 @@ import { PopoverController } from '@ionic/angular';
 // import { PopovercomponentPage } from '../popovercomponent/popovercomponent.page';
 import { UserServiceService } from '../../user-service.service';
 import { ModelPage } from '../model/model.page';
-
+import { NavController} from '@ionic/angular';
 
 
 @Component({
@@ -26,7 +26,13 @@ export class ProfilesPage implements OnInit {
   dataReturned: any;
   ////////////////
   array:any=[]
-  constructor(  public modalController: ModalController,public objPopUp:UserServiceService, private popover:PopoverController,private formBuilder:FormBuilder,public ownerservice:OwnerServiceService,public account:SignInSignUpService) { 
+  constructor(  public modalController: ModalController,
+    public objPopUp:UserServiceService, 
+    private popover:PopoverController,
+    private formBuilder:FormBuilder,public ownerservice:OwnerServiceService,
+    public account:SignInSignUpService,
+    private router:Router,
+    public nav: NavController) { 
     firebase.firestore().collectionGroup("profile")
     .get()
     .then(snap => {
@@ -65,6 +71,10 @@ export class ProfilesPage implements OnInit {
 
   ngOnInit() {
   }
+
+  // modelOpen(){
+  //   this.router.navigateByUrl('')
+  // }
 }
  
 
