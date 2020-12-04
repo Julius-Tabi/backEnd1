@@ -3,13 +3,14 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import { SignInSignUpService } from 'src/app/sign-in-sign-up.service';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-
+  selectedtabs='Spaces';
 
   modalTitle: string;
   modelId: number;

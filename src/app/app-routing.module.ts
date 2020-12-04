@@ -19,10 +19,7 @@ const routes: Routes = [
     path: 'bookings',
     loadChildren: () => import('./pages/bookings/bookings.module').then( m => m.BookingsPageModule)
   },
-  {
-    path: 'history',
-    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
-  },
+ 
   {
     path: 'onboarding',
     loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
@@ -35,10 +32,7 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
   },
-  {
-    path: 'new-bookings',
-    loadChildren: () => import('./pages/new-bookings/new-bookings.module').then( m => m.NewBookingsPageModule)
-  },
+ 
   {
     path: 'manage-spaces',
     loadChildren: () => import('./pages/manage-spaces/manage-spaces.module').then( m => m.ManageSpacesPageModule)
@@ -76,18 +70,21 @@ const routes: Routes = [
     loadChildren: () => import('./pages/reservation/reservation.module').then( m => m.ReservationPageModule)
   },
   {
-    path: 'catagories',
-    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
+    path: 'update-space',
+    loadChildren: () => import('./pages/update-space/update-space.module').then( m => m.UpdateSpacePageModule)
   },
   {
-    path: 'catagories/:uid',
-    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
-  }
-  ,
+    path: 'upload-space',
+    loadChildren: () => import('./pages/upload-space/upload-space.module').then( m => m.UploadSpacePageModule)
+  },
   {
-    path: 'catagory/:catag-name',
-    loadChildren: () => import('./catagories/catagories.module').then( m => m.CatagoriesPageModule)
-  }
+    path: 'resources',
+    loadChildren: () => import('./pages/resources/resources.module').then( m => m.ResourcesPageModule)
+  },
+  {
+    path: 'upload-gallery',
+    loadChildren: () => import('./pages/upload-gallery/upload-gallery.module').then( m => m.UploadGalleryPageModule)
+  },
 
 
   

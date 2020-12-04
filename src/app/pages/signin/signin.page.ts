@@ -57,7 +57,7 @@ export class SigninPage implements OnInit {
       // console.log(res.user);
     }).then(() => {
       loading.dismiss().then(() => {
-        // this.router.navigateByUrl('/user-home');
+        // this.router.navigateByUrl('/update-space');
       });
     },
       error => {

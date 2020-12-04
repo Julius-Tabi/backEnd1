@@ -9,7 +9,6 @@ import { IonInfiniteScroll } from '@ionic/angular';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 
 
-import { ModalController } from '@ionic/angular';
 
 
 
@@ -38,10 +37,10 @@ export class AddProfileModalPage implements OnInit {
   cardImageBase64: string;
   
   cartoonsData: Cartoon[] = [
-    { id: 0, name: 'Tom and Jerry' },
-    { id: 1, name: 'Rick and Morty' },
-    { id: 2, name: 'Ben 10' },
-    { id: 3, name: 'Batman: The Animated Series' }
+    { id: 0, name: 'cameras' },
+    { id: 1, name: 'security' },
+    { id: 2, name: 'parking' },
+    { id: 3, name: 'water' }
   ];
 
   onChange(name: string, isChecked: boolean) {
@@ -56,15 +55,15 @@ export class AddProfileModalPage implements OnInit {
   }
 
   constructor(private formBuilder:FormBuilder,public ownerservice:OwnerServiceService,public account:SignInSignUpService) { 
-    firebase.firestore().collectionGroup("profile")
-        .where("uid", "==", this.account.getUserSession())
-        .get()
-        .then(snap => {
-          snap.forEach(doc => {
-          this.array.push(Object.assign(doc.data(),{"profile_uid":doc.id}) )
-          this.useruid=doc.id
-          });
-        });
+    // firebase.firestore().collectionGroup("profile")
+    //     .where("uid", "==", this.account.getUserSession())
+    //     .get()
+    //     .then(snap => {
+    //       snap.forEach(doc => {
+    //       this.array.push(Object.assign(doc.data(),{"profile_uid":doc.id}) )
+    //       this.useruid=doc.id
+    //       });
+    //     });
    }
 
    updateForm = this.formBuilder.group({

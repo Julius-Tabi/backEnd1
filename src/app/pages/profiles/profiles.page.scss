@@ -1,0 +1,92 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.top{
+position: absolute;
+top:5%;
+height: 20%;
+width: 100%;
+//border-style: solid;
+border-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.bottom{
+    overflow: scroll;
+    width: 100%;
+    height:67%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   //border-style: solid;
+   border-color: white;
+   position: absolute;
+   bottom: 0px;
+}
+.medium{
+    width: 100%;
+    height:5%;
+    border-width: 1px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-style: solid;
+   border-color: grey;
+ 
+   position: absolute;
+   bottom: 70%;
+   border-right: 0px;
+   border-left: 0px;
+   border-top: 0px;
+}
+.slide {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  ion-card{
+      width: 90%;
+      height: 50%;
+      position: absolute;
+      top: 3px;
+      background-color: #454545;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+.img{
+    width: 100%;
+    height:90%;
+    //border-style: solid;
+    //border-color: violet;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    width: 100%;
+    height:20%;
+    //border-style: solid;
+    //border-color: violet;
+    background-color: #454545;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;  
+}

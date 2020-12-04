@@ -6,24 +6,32 @@
   <div class="addForm">
     <form action=""      [formGroup]="updateForm"  >
         
-      <div *ngFor="let x of array" >
-                  <ion-input value="{{x.company_name}}" formControlName="company_name"  placeholder="Name.."></ion-input>
+      <div  >
+                  <ion-input  formControlName="company_name"  placeholder="Name.."></ion-input>
                   
-        <ion-input value="{{x.company_address}}" formControlName="company_address"  placeholder="company_address.."></ion-input>
-        <ion-input value="{{x.company_emaile}}" formControlName="company_emaile"  placeholder="Email.."></ion-input>
-        <ion-input  value="{{x.company_tel}}" formControlName="company_tel"  placeholder="Phone.."></ion-input>
+        <ion-input formControlName="company_address"  placeholder="company_address.."></ion-input>
+        <ion-input  formControlName="company_emaile"  placeholder="Email.."></ion-input>
+        <ion-input  formControlName="company_tel"  placeholder="Phone.."></ion-input>
   
-<ion-input value="{{x.company_website}}" formControlName="company_website" placeholder="Website.."></ion-input>
-<ion-input value="{{x.social_media}}" formControlName="social_media" placeholder="social_media.."></ion-input><br>
+<ion-input  formControlName="company_website" placeholder="Website.."></ion-input>
+<ion-input  formControlName="social_media" placeholder="social_media.."></ion-input><br>
 
 <ion-textarea formControlName="aboutus" placeholder="About us.."></ion-textarea>
 <ion-item>
     <ion-input type="file"  required   name="img"  accept="image/*" id="upload" (change)="fileChangeEvent($event)"></ion-input>
   </ion-item>
   <div *ngFor="let cartoon of cartoonsData">
-    <input type="checkbox"  (change)="onChange(cartoon.name, $event.target.checked)" />
-    {{ cartoon.name }}
-  </div>
+    <iongrid>
+      <ion-row>
+        <ion-col>
+          <input type="checkbox"  (change)="onChange(cartoon.name, $event.target.checked)" /> 
+        </ion-col>
+        <ion-col>
+          {{cartoon.name}}
+        </ion-col>
+      </ion-row>
+    </iongrid>
+     </div>
 
 
 <ion-button shape="round" (click)="submit()" [disabled]="!updateForm.valid" style="--background: #F6F6F6;width: 100%; color: #455A64;font-weight: bold;" >Update</ion-button>
