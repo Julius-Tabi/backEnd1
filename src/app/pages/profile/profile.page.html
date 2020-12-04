@@ -3,13 +3,52 @@
 
  <div class="wrapper">
 <div class="top">
-  <ion-avatar style="position: absolute; top: 20%;">
+  <img style="width: 100%; height: 100%;" src="assets/profilebg.jpg" alt="">
+
+  <ion-avatar style="position: absolute; top: 20%; width: 30%; height: 40%;">
+    <ion-icon style="position: absolute;top: 25%;font-size: 30px;color: white; font-weight:bold;left: 90%;" name="create-outline"></ion-icon>
     <img  src="assets/bg.jpg">
   </ion-avatar>
-  
+  <p style="position:absolute; font-weight:bold;color:white; bottom:7%">Company name</p>
+  <p style="position:absolute;color:white; bottom:0%; font-size: 12px;">Company address</p>
+
+</div>
+
+<div class="bottom">
+  <ion-card style="width: 90%; height: 90%; display: flex;justify-content: left;align-items: initial;flex-direction: column;">
+  <p style="font-weight: bold; font-size: 14px;position: absolute;left: 3%;">Description</p>
+  <p style="position: absolute;left: 3%; top: 16%;">Sawubona</p>
+  </ion-card>
+</div>
+<div class="segments">
+
+  <ion-segment [(ngModel)]="selectedtabs " style="position: absolute; top: 0px;">
+    <ion-segment-button value="Spaces">
+      <ion-label>Spaces</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Reviews">
+      <ion-label>Reviews</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div  style="width: 100%; height: 85%; display: flex;justify-content: center;align-self: center;" *ngIf="selectedtabs == 'Spaces'">  
+    <ion-card style="width: 90%;height: 90%;background-color: white;">
+   Spaces
+    </ion-card>
+   </div>
+   <div  style="width: 100%; height: 85%; display: flex;justify-content: center;align-self: center;" *ngIf="selectedtabs == 'Reviews'"> 
+     
+     <ion-card style="width: 90%;height: 90%;background-color: white; ">
+      Reviews
+     </ion-card>
+    
 </div>
 
 
+   
+   
+   </div> 
 
 
  </div>
@@ -112,4 +151,4 @@
 
   <a  style="color: black;" [routerLink]="'/add-profile-modal'">update profile</a> -->
   
-</ion-content>
+

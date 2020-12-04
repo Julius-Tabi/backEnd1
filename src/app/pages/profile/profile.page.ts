@@ -10,7 +10,7 @@ import { SignInSignUpService } from 'src/app/sign-in-sign-up.service';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-
+  selectedtabs='Spaces';
 
   modalTitle: string;
   modelId: number;
