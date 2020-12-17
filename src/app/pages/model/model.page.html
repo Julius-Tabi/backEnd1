@@ -11,12 +11,82 @@
 
 
     <ion-card *ngFor="let x of array; let i = index">
-      <div (click)="closeModal()">
-        <img style="height: 50%;" [src]="x.img_profile" />
+      <!-- (click)="closeModal()" -->
+      <div >
+        <img style="height: 50%; width:100%" [src]="x.img_profile" />
+      
+        <ion-slides>
+
+          <ion-slide>
+              <img class="slides" style="width:100%; height:50%;" src="assets/office.jfif"/>
+              <h2 class="category">Single office</h2> 
+          </ion-slide>
+  
+          <ion-slide>
+            <img class="slides" style="width:100%; height:50%;" src="assets/board.jpg"/>
+            <h2 class="category">boardroom</h2>
+          </ion-slide>
+  
+          <ion-slide>
+            <img class="slides" style="width:100%; height:50%;" src="assets/open.jfif"/>
+            <h2 class="category">Shared office</h2>
+          </ion-slide>
+          </ion-slides>
+
+          <!-- booking fields -->
+ <!-- <div class="booking">
+  <p style="font-size: 12px;position: absolute;left: 5%;top: 5%;">Date in.</p>
+  <ion-datetime value="date in" placeholder="Select Start Date"></ion-datetime>
+  <p style="font-size: 12px;position: absolute;right:20%;top: 5%;width:10px;">Date out.</p>
+
+  <ion-datetime value="date in" placeholder="Select Start Date"></ion-datetime>
+</div> -->
+
         <ion-card-header>
           <ion-card-title>{{x.company_name}}</ion-card-title>
           <ion-card-title>{{x.aboutus}}</ion-card-title>
           <ion-card-subtitle>{{x.company_address}}</ion-card-subtitle>
+
+          <div class="divider">
+         
+          </div>
+
+          <div class="time">
+            <form>
+      
+              <div class="rows">
+              <ion-row>
+                <ion-col size="6">
+                  <ion-label><b>Date in:</b></ion-label>
+                  <ion-input style="border: solid 1px; border-color: grey; "type="date"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-label><b>Date out:</b></ion-label>
+                  <ion-input style="border: solid 1px; border-color: grey;" type="date"></ion-input>
+                </ion-col>
+              </ion-row>
+           
+      
+              <ion-row>
+                <ion-col size="6">
+                  <ion-label><b>Time in:</b></ion-label>
+                  <ion-input  style="border: solid 1px; border-color: grey;" type="time"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-label><b>Time out:</b></ion-label>
+                  <ion-input  style="border: solid 1px; border-color: grey;" type="time"></ion-input>
+                </ion-col>
+              </ion-row>
+      
+        <div class="timediv">
+
+        </div>
+              </div>
+            </form>
+      
+          </div>
+
+
 
 
           <div *ngFor="let y of x.outside_features;">
@@ -36,6 +106,11 @@
           <ion-card-subtitle>{{x.company_website}}</ion-card-subtitle>
           <ion-card-subtitle>{{x.social_media}}</ion-card-subtitle>
         </ion-card-header>
+
+       <div class="divider">
+
+       </div>
+        
         <ion-card-content class="features">
           <div class="amentities">
             <div class="ament">
@@ -46,13 +121,28 @@
                 <ion-icon class="vd" name="videocam-outline"></ion-icon>
               </div>
             <!-- </div> -->
-            <p style="color: white;">Camera</p>
+            <p class="names" style="color:white; margin-top:100px;">Camera</p>
+            
             <div class="icons">
-              <div class="icc">
-                <ion-icon name="wifi-outline"></ion-icon>
+              <div class="icc" style="margin-left: -35px;">
+                <ion-icon class="wif" name="wifi-outline"></ion-icon>
               </div>
             </div>
-            <p style="color: white;">Wifi</p>
+            <p style="color: white; margin-top:100px; ">Wifi</p>
+
+            <div class="icons">
+              <div class="icc" style="margin-left: -20px;">
+                <ion-icon class="cof" name="cafe-outline"></ion-icon>
+              </div>
+            </div>
+            <p style="color: white; margin-top:100px;">Coffee</p>
+
+            <div class="icons">
+              <div class="icc" style="margin-left: -35px;">
+                <ion-icon class="print" name="print-outline"></ion-icon>
+              </div>
+            </div>
+            <p style="color: white; margin-top:100px;">Printer</p>
           </div>
           </div>
 
@@ -68,8 +158,9 @@
 
         </ion-card-content>
       </div>
-      <ion-button expand="full">Book Now</ion-button>
+      <ion-button href="/signup" expand="full">Book Now</ion-button>
     </ion-card>
   </div>
+
 
 </ion-content>

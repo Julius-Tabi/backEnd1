@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'owner-home',
     pathMatch: 'full'
   },
   {
@@ -84,7 +84,19 @@ const routes: Routes = [
   {
     path: 'upload-gallery',
     loadChildren: () => import('./pages/upload-gallery/upload-gallery.module').then( m => m.UploadGalleryPageModule)
+  },  {
+    path: 'user-landing',
+    loadChildren: () => import('./pages/user-landing/user-landing.module').then( m => m.UserLandingPageModule)
   },
+  {
+    path: 'view-workspace',
+    loadChildren: () => import('./pages/view-workspace/view-workspace.module').then( m => m.ViewWorkspacePageModule)
+  },
+  {
+    path: 'user-bookings',
+    loadChildren: () => import('./pages/user-bookings/user-bookings.module').then( m => m.UserBookingsPageModule)
+  },
+
 
 
   

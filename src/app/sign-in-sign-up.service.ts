@@ -262,9 +262,6 @@ export class SignInSignUpService {
           this.router.navigateByUrl('/user-group');
         }
       });
-      
-      
-      
   }
   setStatus(x) {
     this.status = x;

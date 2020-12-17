@@ -4,10 +4,10 @@
   <ion-icon style="font-size: 30px; color: black;" name="exit-outline"></ion-icon>
 <div class="wrapper">
   <div class="addForm">
-    <form action=""      [formGroup]="updateForm"  >
+    <form action=""   [formGroup]="updateForm"  >
         
       <div  >
-                  <ion-input  formControlName="company_name"  placeholder="Name.."></ion-input>
+              <ion-input  formControlName="company_name"  placeholder="Name.."></ion-input>
                   
         <ion-input formControlName="company_address"  placeholder="company_address.."></ion-input>
         <ion-input  formControlName="company_emaile"  placeholder="Email.."></ion-input>
@@ -34,7 +34,7 @@
      </div>
 
 
-<ion-button shape="round" (click)="submit()" [disabled]="!updateForm.valid" style="--background: #F6F6F6;width: 100%; color: #455A64;font-weight: bold;" >Update</ion-button>
+<ion-button shape="round" (click)="submit()" [disabled]="!updateForm.valid" style="--background: #18d3e0;width: 100%; color: black;font-weight: bold;" >Update</ion-button>
     </div>  
 </form>
 

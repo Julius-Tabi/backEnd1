@@ -7,6 +7,7 @@
     align-items: center;
     position: relative;
 }
+
 .top{
 position: absolute;
 top:5%;
@@ -23,12 +24,21 @@ align-items: center;
     display:flex;
     flex-direction: row;
     font-size: 20px;
-    // position: absolute;
+    position: relative;
     // width:100px;
     // height:100px;
     color:white;
+    // margin-bottom: -10%;
+
+    
+    
 }
+
 .arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
     margin-left:250px;
     align-self: center;
     color:#12D8E1;
@@ -52,6 +62,7 @@ align-items: center;
     height:5%;
     border-width: 1px;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    border-style: solid;
