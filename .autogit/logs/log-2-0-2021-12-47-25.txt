@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 02 2021 12:47:25 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/autogit.json
+
+
+Deleted files:
+
+
+Renamed files:
